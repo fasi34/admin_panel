@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/appointments.css">
+</head>
+
+<body>
+    <div class="sidebar " data-aos="fade-right" data-aos-duration="4000">
+        <div class="adduser animate__animated animate__backInDown">
+            <i class="fa-solid fa-stethoscope user"></i>
+            <h1 class="user_heading">PhysioCare Admin</h1>
+        </div>
+
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html"> <i class="fa-solid fa-gauge"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Patients.html"> <i class="fa-solid fa-user-doctor"></i> Patients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="appointments.html"><i class="fa-solid fa-calendar-check"></i>  Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Reports&Analytics.html"><i class="fa-solid fa-chart-line"></i> Reports & Analytics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="pament.html"> <i class="fa-solid fa-credit-card"></i> Payments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="assignments.html"><i class="fa-solid fa-clipboard-list"></i> Assignments </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main_container">
+        <!-- Header Section -->
+        <div class="header_one d-flex justify-content-between align-items-center mb-4" data-aos="fade-up" data-aos-duration="4000">
+            <h2 class="page-title">
+                <i class="fa-solid fa-calendar-check text-warning"></i> Appointments
+            </h2>
+            <button class="btn btn-warning text-white fw-bold shadow-smm  animate__hinge">
+    <i class="fa-solid fa-plus"></i> Schedule Appointment
+  </button>
+        </div>
+
+        <!-- Quick Stats Section -->
+        <div class="cards_two row g-4 mb-4 animate__animated animate__zoomInDown" data-aos="fade-up" data-aos-duration="4000">
+            <!-- Today’s Appointments -->
+            <div class="col-md-3">
+                <div class="stat-card today">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <h5>Today’s Appointments</h5>
+                    <p class="stat-value">12</p>
+                </div>
+            </div>
+
+            <!-- Upcoming Appointments -->
+            <div class="col-md-3">
+                <div class="stat-card upcoming">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                    </div>
+                    <h5>Upcoming</h5>
+                    <p class="stat-value">28</p>
+                </div>
+            </div>
+
+            <!-- Completed Appointments -->
+            <div class="col-md-3">
+                <div class="stat-card completed">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h5>Completed</h5>
+                    <p class="stat-value">320</p>
+                </div>
+            </div>
+
+            <!-- Canceled Appointments -->
+            <div class="col-md-3">
+                <div class="stat-card canceled">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-xmark"></i>
+                    </div>
+                    <h5>Canceled</h5>
+                    <p class="stat-value">5</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Appointments Table Section -->
+        <div class="card shadow-sm rounded-4 border-0 mb-4 animate__animated animate__fadeInDown" data-aos="fade-up" data-aos-duration="4000">
+            <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">
+                    <i class="fa-solid fa-calendar-check text-warning"></i> Appointments List
+                </h5>
+                <button class="btn btn-warning text-white fw-bold">
+      <i class="fa-solid fa-plus"></i> Schedule Appointment
+    </button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>👤 Patient</th>
+                                <th>🧑‍⚕️ Doctor</th>
+                                <th>📅 Date & Time</th>
+                                <th>📋 Reason</th>
+                                <th>📊 Status</th>
+                                <th>⚙️ Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ali Khan</td>
+                                <td>Dr. Awan</td>
+                                <td>22 Sep 2025 – 10:00 AM</td>
+                                <td>Back Pain</td>
+                                <td>
+                                    <span class="badge bg-success">Confirmed</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-info text-white"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sara Ahmed</td>
+                                <td>Dr. Khan</td>
+                                <td>23 Sep 2025 – 12:30 PM</td>
+                                <td>Knee Injury</td>
+                                <td>
+                                    <span class="badge bg-warning text-dark">Pending</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-info text-white"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>John Smith</td>
+                                <td>Dr. Ali</td>
+                                <td>24 Sep 2025 – 09:00 AM</td>
+                                <td>Shoulder Pain</td>
+                                <td>
+                                    <span class="badge bg-danger">Canceled</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-info text-white"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm rounded-4 border-0 mb-4" data-aos="fade-up" data-aos-duration="4000">
+            <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">
+                    <i class="fa-solid fa-calendar-days text-warning"></i> Calendar View
+                </h5>
+            </div>
+            <div class="card-body">
+                <div id="calendar"></div>
+            </div>
+        </div>
+
+
+
+        <!-- View Button -->
+        <button class="btn view_btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#appointmentDetailsModal">
+  <i class="fa-solid fa-eye"></i> View
+</button>
+
+        <!-- Appointment Details Modal -->
+        <div class="modal fade" id="appointmentDetailsModal" tabindex="-1" aria-labelledby="appointmentDetailsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content rounded-4 shadow-lg border-0">
+                    <div class="modal-header bg-warning text-white">
+                        <h5 class="modal-title fw-bold" id="appointmentDetailsLabel">
+                            <i class="fa-solid fa-calendar-check"></i> Appointment Details
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="row g-4">
+                            <!-- Patient Profile -->
+                            <div class="col-md-3 text-center">
+                                <img src="" class="rounded-circle mb-2 shadow-sm" alt="Patient Photo">
+                                <h6 class="fw-bold">Ali Khan</h6>
+                                <p class="text-muted mb-0">Age: 32</p>
+                            </div>
+
+                            <!-- Appointment Info -->
+                            <div class="col-md-9">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>📅 Date & Time:</strong> 22 Sep 2025 – 10:00 AM</li>
+                                    <li class="list-group-item"><strong>🧑‍⚕️ Doctor:</strong> Dr. Awan</li>
+                                    <li class="list-group-item"><strong>📋 Diagnosis:</strong> Back Pain</li>
+                                    <li class="list-group-item"><strong>📝 Notes:</strong> Patient reports stiffness in lower back.</li>
+                                    <li class="list-group-item"><strong>📊 History:</strong> 2 previous visits, progress improving.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">
+          <i class="fa-solid fa-pen"></i> Edit Appointment
+        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                height: 600,
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: [{
+                    title: 'Ali Khan - Back Pain',
+                    start: '2025-09-22T10:00:00',
+                    color: '#28a745' // green
+                }, {
+                    title: 'Sara Ahmed - Knee Injury',
+                    start: '2025-09-27T12:30:00',
+                    color: '#ffc107' // yellow
+                }, {
+                    title: 'John Smith - Shoulder Pain',
+                    start: '2025-09-24T09:00:00',
+                    color: '#dc3545' // red
+                }]
+            });
+
+            calendar.render();
+        });
+    </script>
+</body>
+
+</html>

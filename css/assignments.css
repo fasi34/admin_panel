@@ -1,0 +1,364 @@
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100% !important;
+    background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+    position: fixed;
+    padding: 55px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.adduser {
+    display: flex;
+    gap: 10px;
+    padding: 15px 10px 15px 10px;
+    align-items: center;
+    background-color: #fff;
+    margin: 10px 10px 30px 10px;
+    border-radius: 12px;
+    transition: ease 0.4s;
+}
+
+.adduser:hover {
+    background-color: #FF6B35;
+    transition: ease 0.4s;
+    border: 2px solid #FFEFE5;
+}
+
+.adduser:hover .user {
+    color: #fff;
+    transition: ease 0.4s;
+}
+
+.adduser:hover .user_heading {
+    color: #fff;
+    transition: ease 0.4s;
+}
+
+.user {
+    color: #000;
+    font-size: 29px;
+}
+
+.user_heading {
+    font-size: 20px;
+    margin: 0;
+    color: #000;
+}
+
+.nav-item {
+    padding: 10px 10px 10px 20px;
+}
+
+.nav-link {
+    color: #fff;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link::before {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 0%;
+    top: 84%;
+    left: 0;
+    transition: ease 0.4s;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    transition: ease 0.4s;
+}
+
+
+/* main container */
+
+.main_container {
+    background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+    max-width: 100%;
+    margin-left: 250px;
+    flex: 1;
+}
+
+.patients-header {
+    background: #fff;
+    padding: 15px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-title i {
+    color: #FF6B35;
+    font-size: 24px;
+}
+
+.add-btn {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Header (same as Payments) */
+
+.patients-header {
+    background: #fff;
+    padding: 15px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-title i {
+    color: #FF6B35;
+    font-size: 24px;
+}
+
+.add-btn {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Table Card Style */
+
+.assignments-table {
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.assignments-table table {
+    margin: 0;
+}
+
+.assignments-table thead {
+    background: #f8f9fa;
+}
+
+.assignments-table th {
+    color: #333;
+    font-weight: 600;
+}
+
+
+/* Modal Card Style */
+
+.assignment-form {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.assignment-form .modal-header {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    border-bottom: none;
+}
+
+.assignment-form .modal-title i {
+    margin-right: 8px;
+}
+
+.assignment-form .modal-body {
+    background: #f9fafc;
+    padding: 25px;
+}
+
+.assignment-form .form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.assignment-form .form-control,
+.assignment-form .form-select {
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+.assignment-form .form-control:focus,
+.assignment-form .form-select:focus {
+    border-color: #FF6B35;
+    box-shadow: 0 0 5px rgba(255, 107, 53, 0.4);
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    background: linear-gradient(135deg, #e85b29, #ff7a3a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.detail-card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border: none;
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+}
+
+.detail-card .card-header {
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+}
+
+.detail-card .card-body {
+    background: #fdfdfd;
+    padding: 20px;
+}
+
+.attachment {
+    display: inline-block;
+    margin: 5px 0;
+    color: #FF6B35;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.attachment i {
+    margin-right: 6px;
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    background: linear-gradient(135deg, #e85b29, #ff7a3a);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.detail-card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.detail-card .card-header {
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+}
+
+@media (max-width:1023px) {
+    .sidebar {
+        width: 30% !important;
+        height: auto;
+    }
+    .main_container {
+        margin-left: 30% !important;
+        width: 70% !important;
+    }
+    .user {
+        font-size: 15px;
+    }
+    .navbar-brand {
+        font-size: 20px;
+    }
+    .user_heading {
+        font-size: 9px;
+    }
+    .nav-item {
+        padding: 10px;
+    }
+    .nav-link {
+        color: #fff;
+        font-size: 10px;
+    }
+    .assignments-table {
+        overflow-x: auto;
+    }
+    .patients-header {
+        flex-direction: column;
+    }
+    .card-body {
+        overflow-x: auto;
+    }
+}

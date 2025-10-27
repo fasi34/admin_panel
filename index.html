@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Bootstrap demo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+<style>
+    #body {
+        position: relative;
+    }
+    
+    .line {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s linear, left 0.08s linear, top 0.08s linear;
+        pointer-events: none;
+        z-index: 1;
+    }
+</style>
+
+<body id="body">
+    <div class="line"></div>
+
+    <div class="sidebar" data-aos="fade-right" data-aos-duration="4000">
+        <div class="adduser animate__animated animate__backInDown">
+            <i class="fa-solid fa-stethoscope user"></i>
+            <h1 class="user_heading">PhysioCare Admin</h1>
+        </div>
+
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html"> <i class="fa-solid fa-gauge"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Patients.html"> <i class="fa-solid fa-user-doctor"></i> Patients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="appointments.html"><i class="fa-solid fa-calendar-check"></i>  Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Reports&Analytics.html"><i class="fa-solid fa-chart-line"></i> Reports & Analytics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="pament.html"> <i class="fa-solid fa-credit-card"></i> Payments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="assignments.html"><i class="fa-solid fa-clipboard-list"></i> Assignments </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main_container">
+
+        <nav class="navbar navbar-expand-lg fade-up">
+            <div class="container-fluid main_nav">
+                <a class="navbar-brand" href="#">Dasbord</a>
+                <div class="profile animate__animated animate__lightSpeedInRight">
+                    <button class="btn btn-outline-success bell" type="submit"><i class="fa-solid fa-bell"></i></button>
+                    <h1 class="profile_heading">profile</h1>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+        <div class="container-fluid fade-up animate__bounce " data-aos="flip-right" data-aos-duration="1500">
+
+            <div class="row">
+
+                <div class="col-lg-4 ">
+                    <div class="card stats-card  ">
+                        <div class="card-body">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-circle-user card_icon"></i>
+                            </div>
+                            <div class="box_flex">
+                                <h5 class="card-title">Appointments</h5>
+                                <p class="card-text">450</p>
+
+                                <div class="progress" role="progressbar" aria-label="Appointments Progress" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 45%"></div>
+                                </div>
+
+                                <h6 class="growth-text"> 45% Increase</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-circle-user card_icon"></i>
+                            </div>
+                            <div class="box_flex">
+                                <h5 class="card-title">New Patients</h5>
+                                <p class="card-text">155</p>
+
+                                <div class="progress" role="progressbar" aria-label="Appointments Progress" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 95%"></div>
+                                </div>
+
+                                <h6 class="growth-text"> 95% Increase</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-circle-user card_icon"></i>
+                            </div>
+                            <div class="box_flex">
+                                <h5 class="card-title">Operations</h5>
+                                <p class="card-text">50</p>
+
+                                <div class="progress" role="progressbar" aria-label="Appointments Progress" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+
+                                <h6 class="growth-text"> 75% Increase</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid fade-up " data-aos="fade-up" data-aos-duration="4000">
+            <div class="row">
+                <div class="col-12">
+                    <div class="graph">
+                        <canvas id="trendChart" width="400" height="200"></canvas>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid  " data-aos="fade-up" data-aos-duration="4000">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <!-- table -->
+                    <div class="patient-summary animate__animated animate__backInDown">
+                        <h3 class="table-heading">Patient Summary</h3>
+                        <table class="summary-table">
+                            <thead>
+                                <tr>
+                                    <th>Patient Name</th>
+                                    <th>Diagnosis</th>
+                                    <th>Assigned Exercise</th>
+                                    <th>Progress</th>
+                                    <th>Next Session</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ali Khan</td>
+                                    <td>Back Pain</td>
+                                    <td>Stretching Plan A</td>
+                                    <td><span class="progress-pill orange">2/5 done</span></td>
+                                    <td>22 Sep 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Sara Ahmed</td>
+                                    <td>Knee Injury</td>
+                                    <td>Squats + Mobility</td>
+                                    <td><span class="progress-pill green">4/6 done</span></td>
+                                    <td>23 Sep 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>John Smith</td>
+                                    <td>Shoulder Pain</td>
+                                    <td>Arm Rotation</td>
+                                    <td><span class="progress-pill blue">3/5 done</span></td>
+                                    <td>24 Sep 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>John Smith</td>
+                                    <td>Shoulder Pain</td>
+                                    <td>Arm Rotation</td>
+                                    <td><span class="progress-pill blue">3/5 done</span></td>
+                                    <td>24 Sep 2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- exsercise -->
+                    <div class="exercise-section">
+                        <h3 class="section-heading">Daily Exercise Assignments</h3>
+
+                        <div class="exercise-card">
+                            <input type="checkbox" id="ex1">
+                            <label for="ex1">
+      <strong>Stretching Plan A</strong> — For Back Pain
+    </label>
+                            <span class="due-date">Due: 22 Sep 2025</span>
+                        </div>
+
+                        <div class="exercise-card">
+                            <input type="checkbox" id="ex2">
+                            <label for="ex2">
+      <strong>Squats + Mobility</strong> — For Knee Injury
+    </label>
+                            <span class="due-date">Due: 23 Sep 2025</span>
+                        </div>
+
+                        <div class="exercise-card">
+                            <input type="checkbox" id="ex3">
+                            <label for="ex3">
+      <strong>Arm Rotations</strong> — For Shoulder Rehab
+    </label>
+                            <span class="due-date">Due: 24 Sep 2025</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Right Side Widgets -->
+                    <div class="right-widgets">
+
+                        <!-- Gauge Chart -->
+                        <div class="widget-card">
+                            <h4 class="widget-title">Overall Recovery Progress</h4>
+                            <canvas id="gaugeChart"></canvas>
+                            <p class="gauge-text">Average Patient Recovery = <span id="gaugeValue">72%</span></p>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="widget-card">
+                            <h4 class="widget-title">Quick Actions</h4>
+                            <div class="quick-actions">
+
+
+                                <button class="action-btn" data-bs-toggle="modal" data-bs-target="#addPatientModal">  <i class="fa-solid fa-user-plus"></i> Add New Patient</button>
+                                <button class="btn btn-primary action-btn" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+    <i class="fa-solid fa-calendar-plus"></i> Schedule Appointment
+  </button>
+                                <button class="action-btn"><i class="fa-solid fa-dumbbell"></i> Add Exercise Plan</button>
+                                <button class="action-btn"><i class="fa-solid fa-file-alt"></i> Generate Report</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="appointments-section" data-aos="fade-up" data-aos-duration="4000">
+            <h3 class="section-heading">Upcoming Appointments</h3>
+
+            <div class="appointment-card">
+                <div class="appt-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="appt-info">
+                    <h5>Ali Khan</h5>
+                    <p>Back Pain Therapy • 22 Sep 2025, 11:00 AM</p>
+                </div>
+                <span class="status-pill orange">Confirmed</span>
+            </div>
+
+            <div class="appointment-card">
+                <div class="appt-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="appt-info">
+                    <h5>Sara Ahmed</h5>
+                    <p>Knee Injury • 23 Sep 2025, 02:30 PM</p>
+                </div>
+                <span class="status-pill green">Upcoming</span>
+            </div>
+
+            <div class="appointment-card">
+                <div class="appt-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="appt-info">
+                    <h5>John Smith</h5>
+                    <p>Shoulder Rehab • 24 Sep 2025, 10:00 AM</p>
+                </div>
+                <span class="status-pill blue">Pending</span>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- Add Patient Modal -->
+    <div class="modal fade" id="addPatientModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content patient-form">
+
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fa-solid fa-user-plus"></i> Add New Patient</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Enter name">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Age</label>
+                                <input type="number" class="form-control" placeholder="Age">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Gender</label>
+                                <select class="form-select">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Diagnosis</label>
+                                <input type="text" class="form-control" placeholder="e.g. Back Pain">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Assigned Doctor</label>
+                                <input type="text" class="form-control" placeholder="e.g. Dr. Awan">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Upload Patient Image</label>
+                                <input type="file" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-orange">Save Patient</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- shadule  -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-3 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appointmentModalLabel"><i class="fa-solid fa-calendar-plus"></i> Schedule Appointment
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Appointment Date</label>
+                            <input type="date" class="form-control" id="date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Appointment Time</label>
+                            <input type="time" class="form-control" id="time">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Any additional details..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const bodyEl = document.getElementById('body');
+        const line = bodyEl.querySelector('.line');
+
+        bodyEl.addEventListener('mouseenter', () => {
+            line.style.opacity = '1';
+        });
+        bodyEl.addEventListener('mouseleave', () => {
+            line.style.opacity = '0';
+        });
+
+        bodyEl.addEventListener('mousemove', function(e) {
+            const rect = bodyEl.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            line.style.left = x + 'px';
+            line.style.top = y + 'px';
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('trendChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+                datasets: [{
+                    label: 'Health Progress',
+                    data: [20, 35, 30, 45, 40, 55],
+                    borderColor: '#F2AB4D',
+                    backgroundColor: 'rgba(242,171,77,0.15)',
+                    borderWidth: 3,
+                    pointBackgroundColor: '#F2AB4D',
+                    pointBorderColor: '#fff',
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    tension: 0.3,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Patient Health Trend',
+                        color: '#F2AB4D',
+                        font: {
+                            size: 18,
+                            weight: 'bold'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: '#f9f9f9'
+                        },
+                        ticks: {
+                            color: '#555'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#f2f2f2'
+                        },
+                        ticks: {
+                            color: '#555'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- right -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx2 = document.getElementById('gaugeChart').getContext('2d');
+
+        const gaugeChart = new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+
+                datasets: [{
+                    data: [72, 28], // 72% recovery
+                    backgroundColor: ['#FF6B35', '#f2f2f2'],
+                    borderWidth: 5,
+                    cutout: '70%'
+                }]
+            },
+            options: {
+                rotation: -90,
+                circumference: 180,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    }
+                }
+            }
+        });
+
+        // Update text dynamically
+        document.getElementById("gaugeValue").textContent = "72%";
+    </script>
+
+</body>
+
+</html>

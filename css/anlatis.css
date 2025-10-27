@@ -1,0 +1,179 @@
+    body {
+        display: flex;
+        overflow-x: hidden;
+    }
+    
+    .sidebar {
+        width: 250px;
+        height: 100%;
+        background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+        position: fixed;
+        padding: 55px 0;
+    }
+    
+    .adduser {
+        display: flex;
+        gap: 10px;
+        padding: 15px 10px 15px 10px;
+        align-items: center;
+        background-color: #fff;
+        margin: 10px 10px 30px 10px;
+        border-radius: 12px;
+        transition: ease 0.4s;
+    }
+    
+    .adduser:hover {
+        background-color: #FF6B35;
+        transition: ease 0.4s;
+        border: 2px solid #FFEFE5;
+    }
+    
+    .adduser:hover .user {
+        color: #fff;
+        transition: ease 0.4s;
+    }
+    
+    .adduser:hover .user_heading {
+        color: #fff;
+        transition: ease 0.4s;
+    }
+    
+    .user {
+        color: #000;
+        font-size: 29px;
+    }
+    
+    .user_heading {
+        font-size: 20px;
+        margin: 0;
+        color: #000;
+    }
+    
+    .nav-item {
+        padding: 10px 10px 10px 20px;
+    }
+    
+    .nav-link {
+        color: #fff;
+        position: relative;
+    }
+    
+    .nav-link:hover {
+        color: #fff;
+    }
+    
+    .nav-link::before {
+        position: absolute;
+        content: "";
+        background-color: #fff;
+        height: 2px;
+        width: 0%;
+        top: 84%;
+        left: 0;
+        transition: ease 0.4s;
+    }
+    
+    .nav-link:hover::before {
+        width: 100%;
+        transition: ease 0.4s;
+    }
+    /* main container */
+    
+    .main_container {
+        background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+        max-width: 100%;
+        margin-left: 250px;
+        flex: 1;
+    }
+    /* Reports & Analytics Header */
+    
+    h2.fw-bold {
+        font-size: 1.8rem;
+        color: #333 !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    /* Dropdown */
+    
+    .form-select {
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
+    
+    .form-select:focus {
+        border-color: #f2ab4d;
+        box-shadow: 0 0 8px rgba(242, 171, 77, 0.4);
+    }
+    /* Buttons */
+    
+    .btn {
+        border-radius: 12px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .btn i {
+        font-size: 0.9rem;
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    /* PDF Button */
+    
+    .btn-danger {
+        background: linear-gradient(45deg, #d9534f, #c9302c);
+        border: none;
+    }
+    
+    .btn-danger:hover {
+        background: linear-gradient(45deg, #c9302c, #a71d2a);
+    }
+    /* Excel Button */
+    
+    .btn-success {
+        background: linear-gradient(45deg, #5cb85c, #449d44);
+        border: none;
+    }
+    
+    .btn-success:hover {
+        background: linear-gradient(45deg, #449d44, #357935);
+    }
+    
+    .main_chartbox {
+        margin: 20px;
+    }
+    
+    .header {
+        margin: 20px;
+    }
+    
+    @media (max-width:1023px) {
+        .sidebar {
+            width: 30% !important;
+            height: 100%;
+        }
+        .main_container {
+            margin-left: 30% !important;
+            width: 70% !important;
+        }
+        .user {
+            font-size: 15px;
+        }
+        .navbar-brand {
+            font-size: 20px;
+        }
+        .user_heading {
+            font-size: 9px;
+        }
+        .nav-item {
+            padding: 10px;
+        }
+        .nav-link {
+            color: #fff;
+            font-size: 10px;
+        }
+    }

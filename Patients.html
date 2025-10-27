@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/Patients.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="sidebar" data-aos="fade-right" data-aos-duration="1500">
+        <div class="adduser animate__animated animate__backInDown">
+            <i class="fa-solid fa-stethoscope user"></i>
+            <h1 class="user_heading">PhysioCare Admin</h1>
+        </div>
+
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html"> <i class="fa-solid fa-gauge"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Patients.html"> <i class="fa-solid fa-user-doctor"></i> Patients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="appointments.html"><i class="fa-solid fa-calendar-check"></i>  Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Reports&Analytics.html"><i class="fa-solid fa-chart-line"></i> Reports & Analytics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="pament.html"> <i class="fa-solid fa-credit-card"></i> Payments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="assignments.html"><i class="fa-solid fa-clipboard-list"></i> Assignments </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main_container">
+        <!-- Patients Page Header -->
+        <div class="patients-header d-flex justify-content-between align-items-center mb-4" data-aos="fade-up" data-aos-duration="1500">
+            <h2 class="page-title mb-0">
+                <i class="fa-solid fa-user-doctor"></i> Patients
+            </h2>
+            <!-- Add Patient Button -->
+
+            <button class="btn btn-orange animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#addPatientModal">
+    <i class="fa-solid fa-user-plus"></i> Add New Patient
+  </button>
+
+
+        </div>
+
+
+
+
+        <!-- Patient List Section -->
+        <div class="patient-list animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1500">
+            <h3 class="section-heading">
+                <i class="fa-solid fa-users"></i> Patient List
+            </h3>
+
+            <div class="table-responsive">
+                <table class="table patient-table align-middle">
+                    <thead>
+                        <tr>
+                            <th>👤 Name</th>
+                            <th>📅 Age / DOB</th>
+                            <th>📋 Diagnosis</th>
+                            <th>🏥 Doctor</th>
+                            <th>🗓️ Next Appointment</th>
+                            <th>📊 Progress</th>
+                            <th>⚙️ Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ali Khan</td>
+                            <td>32</td>
+                            <td>Back Pain</td>
+                            <td>Dr. Awan</td>
+                            <td>22 Sep 2025</td>
+                            <td>
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-info" style="width: 45%">45%</div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></button>
+                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sara Ahmed</td>
+                            <td>27</td>
+                            <td>Knee Injury</td>
+                            <td>Dr. Khan</td>
+                            <td>23 Sep 2025</td>
+                            <td>
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-success" style="width: 72%">72%</div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></button>
+                                <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!-- Search + Filters -->
+        <div class="search-filters mb-4 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1500">
+            <div class="row g-3 align-items-center">
+
+                <!-- Search Bar -->
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-text bg-orange text-white">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+                        <input type="text" class="form-control" placeholder="Search by name or diagnosis...">
+                    </div>
+                </div>
+
+                <!-- Filter: Doctor -->
+                <div class="col-md-3">
+                    <select class="form-select">
+        <option selected disabled>Filter by Doctor</option>
+        <option>Dr. Awan</option>
+        <option>Dr. Khan</option>
+        <option>Dr. Smith</option>
+      </select>
+                </div>
+
+                <!-- Filter: Appointment Date -->
+                <div class="col-md-3">
+                    <input type="date" class="form-control">
+                </div>
+
+                <!-- Filter: Progress -->
+                <div class="col-md-2">
+                    <select class="form-select">
+        <option selected disabled>Progress</option>
+        <option>0% - 25%</option>
+        <option>26% - 50%</option>
+        <option>51% - 75%</option>
+        <option>76% - 100%</option>
+      </select>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Quick Stats Section -->
+        <div class="quick-stats row g-4 mb-4 animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1500">
+
+            <!-- Total Patients -->
+            <div class="col-md-3" data-aos="flip-right" data-aos-duration="1500">
+                <div class="stat-card">
+                    <i class="fa-solid fa-users stat-icon"></i>
+                    <h5>Total Patients</h5>
+                    <p>120</p>
+                </div>
+            </div>
+
+            <!-- New Patients -->
+            <div class="col-md-3" data-aos="flip-right" data-aos-duration="1500">
+                <div class="stat-card">
+                    <i class="fa-solid fa-user-plus stat-icon"></i>
+                    <h5>New Patients (This Month)</h5>
+                    <p>18</p>
+                </div>
+            </div>
+
+            <!-- Avg Recovery -->
+            <div class="col-md-3" data-aos="flip-right" data-aos-duration="1500">
+                <div class="stat-card">
+                    <i class="fa-solid fa-chart-line stat-icon"></i>
+                    <h5>Avg. Recovery Progress</h5>
+                    <p>72%</p>
+                </div>
+            </div>
+
+            <!-- Upcoming Appointments -->
+            <div class="col-md-3" data-aos="flip-right" data-aos-duration="1500">
+                <div class="stat-card">
+                    <i class="fa-solid fa-calendar-days stat-icon"></i>
+                    <h5>Upcoming Appointments</h5>
+                    <p>25</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="card detail-card mb-4 " data-aos="fade-up" data-aos-duration="1500">
+            <div class="card-header bg-gradient">
+                <h5><i class="fa-solid fa-calendar-check"></i> Upcoming Appointments</h5>
+            </div>
+            <div class="card-body">
+
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Therapist</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25 Sept 2025</td>
+                            <td>10:00 AM</td>
+                            <td>Dr. Sarah Ali</td>
+                            <td>
+                                <button onclick="rescheduleAppointment()" class="btn btn-reschedule">
+                                <i class="fa-solid fa-calendar-alt"></i> Reschedule
+                                </button>
+                                <button onclick="cancelAppointment()" class="btn btn-cancel">
+                                 <i class="fa-solid fa-times"></i> Cancel
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30 Sept 2025</td>
+                            <td>11:30 AM</td>
+                            <td>Dr. Ahmed Khan</td>
+                            <td>
+                                <button onclick="rescheduleAppointment()" class="btn btn-reschedule">
+                                <i class="fa-solid fa-calendar-alt"></i> Reschedule
+                                </button>
+                                <button onclick="cancelAppointment()" class="btn btn-cancel">
+                                 <i class="fa-solid fa-times"></i> Cancel
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+        <div class="assignments-section" data-aos="fade-up" data-aos-duration="1500">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-clipboard-list"></i> Assignments</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table assignments-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Exercise Routine A</td>
+                            <td>2025-09-30</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>
+                                <button class="btn btn-view"><i class="fa-solid fa-eye"></i> View </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Stretching Homework</td>
+                            <td>2025-09-20</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td>
+                                <button class="btn btn-view"><i class="fa-solid fa-eye"></i> View </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Posture Correction</td>
+                            <td>2025-09-15</td>
+                            <td><span class="status overdue">Overdue</span></td>
+                            <td>
+                                <button class="btn btn-view"><i class="fa-solid fa-eye"></i> View </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="resources-section" data-aos="fade-up" data-aos-duration="1500">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-dumbbell"></i> Resources & Exercises</h2>
+            </div>
+
+            <div class="container-fluid resources-grid">
+                <div class="row">
+                    <!-- PDF -->
+                    <div class="col-4 resource-card">
+                        <i class="fa-solid fa-file-pdf pdf-icon"></i>
+                        <h4>Stretching Guide</h4>
+                        <p>PDF File - Instructions for daily stretching</p>
+                        <a href="files/stretching-guide.pdf" download class="btn btn-download">
+                            <i class="fa-solid fa-download"></i> Download
+                        </a>
+                    </div>
+
+                    <!-- Video -->
+                    <div class="col-4  resource-card">
+                        <i class="fa-solid fa-video video-icon"></i>
+                        <h4>Posture Training</h4>
+                        <p>Video - Learn correct sitting posture</p>
+                        <a href="videos/file_example_MP4_640_3MG.mp4" download class="btn btn-download">
+                            <i class="fa-solid fa-download"></i> Download
+                        </a>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="col-4  resource-card">
+                        <i class="fa-solid fa-image image-icon"></i>
+                        <h4>Exercise Chart</h4>
+                        <p>Image - Visual guide to basic exercises</p>
+                        <a href="images/exercise-chart.jpg" download class="btn btn-download">
+                            <i class="fa-solid fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid communication-section" data-aos="fade-up" data-aos-duration="1500">
+            <div class="row">
+                <!-- Chat Box -->
+                <div class="col-lg-7 chat-box">
+                    <div class="chat-header">
+                        <h3><i class="fa-solid fa-comments"></i> Chat with Therapist</h3>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message received">
+                            <p>Hi! How are you feeling today?</p>
+                            <span class="time">10:30 AM</span>
+                        </div>
+                        <div class="message sent">
+                            <p>I’m feeling better, but still some pain in my back.</p>
+                            <span class="time">10:32 AM</span>
+                        </div>
+                        <div class="message received">
+                            <p>Okay 👍 please follow your stretching routine.</p>
+                            <span class="time">10:35 AM</span>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Type your message..." />
+                        <button class="btn-send"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                <div class="col-lg-4 notifications">
+                    <div class="notif-header">
+                        <h3><i class="fa-solid fa-bell"></i> Notifications</h3>
+                    </div>
+                    <ul class="notif-list">
+                        <li class="notif overdue">
+                            <i class="fa-solid fa-exclamation-circle"></i> Assignment “Posture Correction” is overdue!
+                        </li>
+                        <li class="notif upcoming">
+                            <i class="fa-solid fa-calendar-day"></i> Appointment tomorrow at 11:00 AM with Dr. Smith
+                        </li>
+                        <li class="notif general">
+                            <i class="fa-solid fa-clipboard-check"></i> “Stretching Homework” marked as completed ✅
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- Add Patient Modal -->
+    <div class="modal fade" id="addPatientModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content patient-form">
+
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fa-solid fa-user-plus"></i> Add New Patient</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Enter name">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Age</label>
+                                <input type="number" class="form-control" placeholder="Age">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Gender</label>
+                                <select class="form-select">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Diagnosis</label>
+                                <input type="text" class="form-control" placeholder="e.g. Back Pain">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Assigned Doctor</label>
+                                <input type="text" class="form-control" placeholder="e.g. Dr. Awan">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Upload Patient Image</label>
+                                <input type="file" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-orange">Save Patient</button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        function rescheduleAppointment() {
+            alert('📅 Appointment reschedule request sent!');
+        }
+
+        function cancelAppointment() {
+            alert('❌ Appointment has been cancelled!');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

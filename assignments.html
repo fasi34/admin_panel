@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/assignments.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="sidebar" data-aos="fade-right" data-aos-duration="1500">
+        <div class="adduser animate__animated animate__backInDown">
+            <i class="fa-solid fa-stethoscope user"></i>
+            <h1 class="user_heading">PhysioCare Admin</h1>
+        </div>
+
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html"> <i class="fa-solid fa-gauge"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Patients.html"> <i class="fa-solid fa-user-doctor"></i> Patients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="appointments.html"><i class="fa-solid fa-calendar-check"></i>  Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Reports&Analytics.html"><i class="fa-solid fa-chart-line"></i> Reports & Analytics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="pament.html"> <i class="fa-solid fa-credit-card"></i> Payments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="assignments.html"><i class="fa-solid fa-clipboard-list"></i> Assignments </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main_container">
+
+        <div class="patients-header fade-up" data-aos="fade-up" data-aos-duration="1500">
+            <h1 class="page-title">
+                <i class="fas fa-clipboard-list"></i> Assignments
+            </h1>
+            <button type="button" class="add-btn animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#assignmentModal">
+        ➕ Add Assignment
+    </button>
+        </div>
+
+
+        <!-- table -->
+        <div class="assignments-table card-style" data-aos="fade-up" data-aos-duration="1500">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Assigned To</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Daily Exercise Routine</td>
+                        <td>John Doe</td>
+                        <td>2025-09-30</td>
+                        <td><span class="badge bg-warning">Pending</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-info"><i class="fa-solid fa-eye"></i></button>
+                            <button class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i></button>
+                            <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Meditation Practice</td>
+                        <td>Jane Smith</td>
+                        <td>2025-09-28</td>
+                        <td><span class="badge bg-success">Completed</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-info"><i class="fa-solid fa-eye"></i></button>
+                            <button class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i></button>
+                            <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="container my-4">
+
+            <!-- Assignment Info Card -->
+            <div class="card detail-card mb-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header ">
+                    <h5><i class="fa-solid fa-clipboard"></i> Assignment Info</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Title:</strong> Cognitive Worksheet</p>
+                    <p><strong>Description:</strong> Complete the worksheet to identify thought patterns.</p>
+                    <p><strong>Date Assigned:</strong> 20 Sept 2025</p>
+                    <p><strong>Due Date:</strong> 25 Sept 2025</p>
+                </div>
+            </div>
+
+            <!-- Attachments Card -->
+            <div class="card detail-card mb-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header bg-gradient">
+                    <h5><i class="fa-solid fa-paperclip"></i> File Attachments</h5>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="attachment"><i class="fa-solid fa-file-pdf"></i> worksheet.pdf</a>
+                    <br>
+                    <a href="#" class="attachment"><i class="fa-solid fa-file-word"></i> notes.docx</a>
+                </div>
+            </div>
+
+            <!-- Patient Submission Card -->
+            <div class="card detail-card mb-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header bg-gradient">
+                    <h5><i class="fa-solid fa-upload"></i> Patient’s Submission</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Upload Your File</label>
+                            <input type="file" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Notes</label>
+                            <textarea class="form-control" rows="3" placeholder="Write your notes here..."></textarea>
+                        </div>
+                        <button class="btn save-btn"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Therapist Feedback Card -->
+            <div class="card detail-card mb-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header bg-gradient">
+                    <h5><i class="fa-solid fa-comments"></i> Therapist Feedback</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Feedback</label>
+                            <textarea class="form-control" rows="3" placeholder="Write feedback..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-select">
+            <option>Pending</option>
+            <option>In Review</option>
+            <option>Completed</option>
+          </select>
+                        </div>
+                        <button class="btn save-btn"><i class="fa-solid fa-save"></i> Save Feedback</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container my-4">
+
+            <!-- Header -->
+            <div class="card detail-card mb-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header bg-gradient">
+                    <h5><i class="fa-solid fa-chart-line"></i> Patient Progress Tracking</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+
+                        <!-- Patient Dropdown -->
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fa-solid fa-user"></i> Select Patient</label>
+                            <select class="form-select">
+            <option>John Doe</option>
+            <option>Sarah Ali</option>
+            <option>Ahmed Khan</option>
+          </select>
+                        </div>
+
+                        <!-- Last Submission -->
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"><i class="fa-solid fa-calendar-check"></i> Last Submission Date</label>
+                            <input type="text" class="form-control" value="20 Sept 2025" readonly>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Assignments Table -->
+
+
+            <div class="card detail-card mb-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="card-header bg-gradient">
+                    <h5><i class="fa-solid fa-list"></i> All Assignments</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cognitive Worksheet</td>
+                                <td>25 Sept 2025</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>Memory Exercise</td>
+                                <td>28 Sept 2025</td>
+                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                <td>—</td>
+                            </tr>
+                            <!-- Overdue Highlight -->
+                            <tr class="overdue-row">
+                                <td>Relaxation Techniques</td>
+                                <td>20 Sept 2025</td>
+                                <td><span class="badge bg-danger">Overdue</span></td>
+                                <td>
+                                    <button onclick="btn()" class="btn btn-reminder">
+              <i class="fa-solid fa-bell"></i> Send Reminder
+            </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Add Assignment Modal -->
+        <div class="modal fade" id="assignmentModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content assignment-form">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title"><i class="fa-solid fa-clipboard-list"></i> Add New Assignment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form>
+                            <!-- Select Patient -->
+                            <div class="mb-3">
+                                <label class="form-label"><i class="fa-solid fa-user"></i> Select Patient</label>
+                                <select class="form-select" required>
+              <option value="">-- Choose Patient --</option>
+              <option>John Doe</option>
+              <option>Jane Smith</option>
+              <option>Michael Lee</option>
+            </select>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="mb-3">
+                                <label class="form-label"><i class="fa-solid fa-heading"></i> Assignment Title</label>
+                                <input type="text" class="form-control" placeholder="Enter assignment title" required>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="mb-3">
+                                <label class="form-label"><i class="fa-solid fa-align-left"></i> Description / Instructions</label>
+                                <textarea class="form-control" rows="3" placeholder="Write instructions here..."></textarea>
+                            </div>
+
+                            <!-- File Upload -->
+                            <div class="mb-3">
+                                <label class="form-label"><i class="fa-solid fa-file-upload"></i> Upload File</label>
+                                <input type="file" class="form-control">
+                                <small class="text-muted">Supported: PDF, DOC, Images</small>
+                            </div>
+
+                            <!-- Deadline + Priority -->
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><i class="fa-solid fa-calendar-day"></i> Deadline</label>
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label"><i class="fa-solid fa-flag"></i> Priority</label>
+                                    <select class="form-select">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+              </select>
+                                </div>
+                            </div>
+
+                            <!-- Save Button -->
+                            <div class="text-end">
+                                <button type="submit" class="btn save-btn">
+              <i class="fa-solid fa-save"></i> Save Assignment
+            </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script>
+        function btn() {
+            alert('Reminder sent to patient successfully!');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

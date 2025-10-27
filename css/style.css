@@ -1,0 +1,604 @@
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100% !important;
+    background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+    position: fixed;
+    padding: 55px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.adduser {
+    display: flex;
+    gap: 10px;
+    padding: 15px 10px 15px 10px;
+    align-items: center;
+    background-color: #fff;
+    margin: 10px 10px 30px 10px;
+    border-radius: 12px;
+    transition: ease 0.4s;
+}
+
+.adduser:hover {
+    background-color: #FF6B35;
+    transition: ease 0.4s;
+    border: 2px solid #FFEFE5;
+}
+
+.adduser:hover .user {
+    color: #fff;
+    transition: ease 0.4s;
+}
+
+.adduser:hover .user_heading {
+    color: #fff;
+    transition: ease 0.4s;
+}
+
+.user {
+    color: #000;
+    font-size: 29px;
+}
+
+.user_heading {
+    font-size: 20px;
+    margin: 0;
+    color: #000;
+}
+
+.nav-item {
+    padding: 10px 10px 10px 20px;
+}
+
+.nav-link {
+    color: #fff;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link::before {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 0%;
+    top: 84%;
+    left: 0;
+    transition: ease 0.4s;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    transition: ease 0.4s;
+}
+
+
+/* main container */
+
+.main_container {
+    background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+    max-width: 100%;
+    margin-left: 250px;
+    flex: 1;
+}
+
+.form-control {
+    box-shadow: none !important;
+}
+
+.main_nav {
+    background-color: #FF8345;
+    margin: 0 10px;
+}
+
+.bell {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color: #000;
+    text-align: center;
+    background-color: #FFB26B;
+    transition: ease 0.4s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.bell:hover {
+    background-color: #FF6B35;
+    transition: ease 0.4s;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.profile:hover {
+    background-color: #FF6B35;
+    transition: ease 0.4s;
+    color: #fff;
+}
+
+.profile {
+    display: flex;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5px 25px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.profile_heading {
+    font-size: 20px;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.stats-card {
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.stats-card .card-body {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_icon {
+    font-size: 40px;
+    color: #fff;
+}
+
+.card-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.progress {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.growth-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.container-fluid {
+    margin-top: 30px;
+}
+
+.graph {
+    background-color: #fff;
+}
+
+#trendChart {
+    width: 100%;
+}
+
+.patient-summary {
+    margin-top: 25px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table-heading {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    padding: 12px 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.summary-table thead {
+    background: #f8f8f8;
+}
+
+.summary-table th,
+.summary-table td {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-table th {
+    font-weight: 600;
+    color: #444;
+}
+
+.summary-table tr:hover {
+    background: #fff6f1;
+}
+
+.progress-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.progress-pill.orange {
+    background: #FF6B35;
+}
+
+.progress-pill.green {
+    background: #28a745;
+}
+
+.progress-pill.blue {
+    background: #007bff;
+}
+
+
+/* Exercise Section */
+
+.exercise-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+}
+
+.exercise-section .section-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.exercise-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+.exercise-card:hover {
+    background: #fff6f1;
+    transform: translateY(-2px);
+}
+
+.exercise-card input[type="checkbox"] {
+    accent-color: #FF6B35;
+    margin-right: 12px;
+    transform: scale(1.2);
+}
+
+
+/* Label */
+
+.exercise-card label {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+}
+
+.due-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #FF6B35;
+    background: rgba(255, 107, 53, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+
+/* Right Side Widgets container */
+
+.right-widgets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.widget-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.gauge-text {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #555;
+}
+
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.action-btn {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.appointments-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+    margin: 20px;
+}
+
+.section-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.appointment-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-radius: 12px;
+    background: #fafafa;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+.appointment-card:hover {
+    background: #fff6f1;
+    transform: translateY(-2px);
+}
+
+.appt-icon {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appt-icon i {
+    font-size: 18px;
+}
+
+.appt-info {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.appt-info h5 {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.appt-info p {
+    font-size: 13px;
+    margin: 2px 0 0;
+    color: #666;
+}
+
+.status-pill {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status-pill.orange {
+    background: #FF6B35;
+}
+
+.status-pill.green {
+    background: #28a745;
+}
+
+.status-pill.blue {
+    background: #007bff;
+}
+
+.fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.patient-form .modal-header {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+}
+
+.patient-form .modal-header .btn-close {
+    filter: invert(1);
+}
+
+.patient-form .form-control,
+.patient-form .form-select {
+    border-radius: 8px;
+}
+
+.btn-orange {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    opacity: 0.9;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:1023px) {
+    .sidebar {
+        width: 30% !important;
+        height: auto;
+    }
+    .main_container {
+        margin-left: 30% !important;
+        width: 70% !important;
+    }
+    .user {
+        font-size: 15px;
+    }
+    .navbar-brand {
+        font-size: 20px;
+    }
+    .user_heading {
+        font-size: 9px;
+    }
+    .nav-item {
+        padding: 10px;
+    }
+    .nav-link {
+        color: #fff;
+        font-size: 10px;
+    }
+    .main_nav {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .summary-table th,
+    .summary-table td {
+        padding: 12px 12px;
+    }
+    .appointment-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .stats-card {
+        padding: 5px;
+    }
+    .card-body {
+        padding-left: 0px;
+    }
+    .growth-text {
+        padding: 3px 5px;
+    }
+    .card-body {
+        justify-content: center;
+    }
+    .card {
+        margin-top: 20px;
+    }
+    .right-widgets {
+        margin-top: 20px;
+    }
+    .summary-table th {
+        font-size: 12px;
+    }
+}

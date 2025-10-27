@@ -1,0 +1,247 @@
+body {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+    position: fixed;
+    padding: 55px 0;
+}
+
+.adduser {
+    display: flex;
+    gap: 10px;
+    padding: 15px 10px 15px 10px;
+    align-items: center;
+    background-color: #fff;
+    margin: 10px 10px 30px 10px;
+    border-radius: 12px;
+    transition: ease 0.4s;
+}
+
+.adduser:hover {
+    background-color: #FF6B35;
+    transition: ease 0.4s;
+    border: 2px solid #FFEFE5;
+}
+
+.adduser:hover .user {
+    color: #fff;
+    transition: ease 0.4s;
+}
+
+.adduser:hover .user_heading {
+    color: #fff;
+    transition: ease 0.4s;
+}
+
+.user {
+    color: #000;
+    font-size: 29px;
+}
+
+.user_heading {
+    font-size: 20px;
+    margin: 0;
+    color: #000;
+}
+
+.nav-item {
+    padding: 10px 10px 10px 20px;
+}
+
+.nav-link {
+    color: #fff;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link::before {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 0%;
+    top: 84%;
+    left: 0;
+    transition: ease 0.4s;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    transition: ease 0.4s;
+}
+
+
+/* main container */
+
+.main_container {
+    background: linear-gradient(180deg, #FF6B35 0%, #1D3557 100%);
+    max-width: 100%;
+    margin-left: 250px;
+    flex: 1;
+}
+
+.header_one {
+    margin: 20px;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #FF6B35, #FF9350);
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #ff6b35, #ff9153);
+    color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card h5 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Different Colors per Card */
+
+.stat-card.today {
+    background: linear-gradient(135deg, #ff6b35, #ff9153);
+}
+
+.stat-card.upcoming {
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+}
+
+.stat-card.completed {
+    background: linear-gradient(135deg, #6a4c93, #a46ce5);
+}
+
+.stat-card.canceled {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.card {
+    border-radius: 16px;
+    margin: 20px;
+}
+
+.table thead {
+    font-weight: 600;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 12px;
+}
+
+.btn-sm {
+    border-radius: 8px;
+    margin-right: 5px;
+}
+
+.cards_two {
+    margin: 20px;
+}
+
+.view_btn {
+    margin: 20px;
+    width: 96%;
+}
+
+.fc-header-toolbar {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (max-width:1023px) {
+    .sidebar {
+        width: 30% !important;
+        height: 100%;
+    }
+    .main_container {
+        margin-left: 30% !important;
+        width: 70% !important;
+    }
+    .user {
+        font-size: 15px;
+    }
+    .navbar-brand {
+        font-size: 20px;
+    }
+    .user_heading {
+        font-size: 9px;
+    }
+    .nav-item {
+        padding: 10px;
+    }
+    .nav-link {
+        color: #fff;
+        font-size: 10px;
+    }
+    .view_btn {
+        margin: 20px;
+        width: 85%;
+    }
+    .header_one {
+        margin: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card-header h5 {
+        font-size: 15px;
+    }
+}
